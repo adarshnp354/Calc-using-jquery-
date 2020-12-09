@@ -1,25 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-</head>
-<body>
-    <input type="text" placeholder="ENTER NUMBER 1" id="n1">
-    <input type="text" placeholder="ENTER NUMBER 2" id="n2">
-    <input type="button" value="Calculate"  id="btn">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-         $("#btn").click(function(){
+    <html lang="en">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+                <link rel="stylesheet" href="index.css">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        </head>
+        <body>
+            <h1>CALCULATOR</h1>
+            <div class="container">
+                <form>
+                    <div>
+                        NUMBER 1 :  <input type="text" placeholder="ENTER NUMBER 1" id="n1">
+                    </div>
+                    <div>
+                        NUMBER 2 :  <input type="text" placeholder="ENTER NUMBER 2" id="n2">
+                    </div>
+                    <div>
+                        <input type="button" value="SUM" id="sum">
+                    
+                        <input type="button" value="PRODUCT" id="pdt">
+                    </div>
+                    <div> 
+                        <input type="button" value="DIFFERENCE" id="dif">
+                    
+                        <input type="button" value="DIVIDE" id="divi">
+                    </div>
+                    <div> 
+                        <input type="button" value="PERCENTEGE" id="perc">
+                    
+                        <input type="button" value="CLEAR" id="clear">
+                    </div>
+                    <div> 
+                        <input type="button" value="HISTORY" id="his">
+                    
+                        <button type="reset" id="btn">RESET</button>
+                    </div>
+                    <div>
+                        RESULT :  <input type="text" placeholder="YOUR RESULT" id="res">
+                    </div>
+                </form>
+            </div>
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    var a=$("#n1").val();
+                    var b=$("#n2").val();
                 
-                var a=$("#n1").val();
-                alert(a);
-                var b=$("#n2").val();
-            })  
-        });
-    </script>
-</body>
-</html>
+                    $("#sum").click(function(){
+                        calc(sum);
+                        return sum;
+        
+                    })
+                    function calc(callback){
+                        callback(a,b);
+                    }
+                    function sum(a,b){
+                        alert(sum);
+                    }
+
+                    
+                });
+            </script>
+        </body>
+    </html>
